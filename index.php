@@ -28,16 +28,22 @@
             ],
         ];
 
+        /**
+         * This function will filter boos by author
+         * @param array $books
+         * @param string $author
+         */
         function fillterByAuthor( $books, $author ){
-
+            // defain an empty array
             $filteredBooks = [];
 
             foreach( $books as $book ){
                 if( $book['author'] === $author ){
+                    // if logic match add in to $filteredBooks array
                     $filteredBooks[] = $book;
                 }
             }
-
+            // return new array 
             return $filteredBooks;
         }
     ?>
