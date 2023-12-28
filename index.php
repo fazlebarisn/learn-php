@@ -46,12 +46,14 @@
             // return new array 
             return $filteredBooks;
         }
+
+        $filteredBooks = fillterByAuthor( $books, 'Robi Thakur');
     ?>
 
     <h1>Recomended Books List</h1>
 
     <ul>
-        <?php foreach( fillterByAuthor( $books, 'Robi Thakur' ) as $book ) : ?>
+        <?php foreach( $filteredBooks as $book ) : ?>
            <li><?= $book['name'] ?> By <?= $book['author'] ?></li>
         <?php endforeach; ?>
     </ul>
